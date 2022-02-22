@@ -1,0 +1,196 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.0/jquery.validate.min.js"></script>
+<script src="final.js"></script>
+<link rel="stylesheet" type="text/css" href="final.css">
+</head>
+<body>
+    <img src="battleshipTitle.jpg">
+
+    <div class="tabs">
+      <!-- tabs -->
+      <ul class="tabNavigation">
+        <li class="hide"><a href="#basics">Basics</a></li>
+        <li class="hide"><a href="#play">Play!</a></li>
+        <li><a href="#reset">Restart Game</a></li>
+      </ul>
+    
+      <!-- tab containers -->
+      <div id="basics">
+      	<h2>Bryan's Battleship How To Play</h2>
+      	<h3>Step 1</h3>
+        <p>You will first choose 10 numbers. These will match the coordinates of where you would like to place your ships.</p>
+         <h3>Step 2</h3>
+        <p>Once you have your 10 numbers entered in, click the submit button. This will bring you to the gameboard to start the battle</p>
+         <h3>Step 3</h3>
+        <p>Click on one of the tiles to choose where the computer has placed its ships. The tile will change based on the outcome. Red is a hit, Gray is a miss.</p>
+         <h3>Step 4</h3>
+        <p>After your turn, the computer will guess where you placed your ships! If you hit all the computer ships before it destroys all yours... YOU WIN!</p>
+      </div>
+      <div id="play">
+     <h1>Choose sectors for your ships, Commander</h1>
+	<form id="playerInput">
+	<h4>Please select a sector for each ship between 0 and 99:</h4>
+	<label>S.S Bryan         </label>
+	<input id="num1" type="number" min="0" max="99" required="true"><br>
+	<label>The Kraken        </label>
+	<input id="num2" type="number" min="0" max="99" required="true"><br>
+	<label>S.S Anne          </label>
+	<input id="num3" type="number" min="0" max="99" required="true"><br>
+	<label>The Black Pearl   </label>
+	<input id="num4" type="number" min="0" max="99" required="true"><br>
+	<label>The Mayflower     </label>
+	<input id="num5" type="number" min="0" max="99" required="true"><br>
+	<label>S.S JavaScript    </label>
+	<input id="num6" type="number" min="0" max="99" required="true"><br>
+	<label>S.S Tyler         </label>
+	<input id="num7" type="number" min="0" max="99" required="true"><br>
+	<label>The Ship of Death </label>
+	<input id="num8" type="number" min="0" max="99" required="true"><br>
+	<label>The Mooj          </label>
+	<input id="num9" type="number" min="0" max="99" required="true"><br>
+	<label>S.S Emily         </label>
+	<input id="num10" type="number" min="0" max="99" required="true"><br>
+	<div id="error"></div>
+	<input name="submit" type="submit" id="submit" value="Submit">
+	</form>
+	<img id="win" src="victory.gif">
+	<img id="lose" src="lose.jpeg">
+	<div id="gameboard">
+		<table>
+	  <tbody>
+		<tr>
+		  <td id="0" class="square"></td>
+		  <td id="1" class="square"></td>
+		  <td id="2" class="square"></td>
+		  <td id="3" class="square"></td>
+		  <td id="4" class="square"></td>
+		  <td id="5" class="square"></td>
+		  <td id="6" class="square"></td>
+		  <td id="7" class="square"></td>
+		  <td id="8" class="square"></td>
+		  <td id="9" class="square"></td>
+		</tr>
+		<tr>
+		  <td id="10" class="square"></td>
+		  <td id="11" class="square"></td>
+		  <td id="12" class="square"></td>
+		  <td id="13" class="square"></td>
+		  <td id="14" class="square"></td>
+		  <td id="15" class="square"></td>
+		  <td id="16" class="square"></td>
+		  <td id="17" class="square"></td>
+		  <td id="18" class="square"></td>
+		  <td id="19" class="square"></td>
+		</tr>
+		<tr>
+		  <td id="20" class="square"></td>
+		  <td id="21" class="square"></td>
+		  <td id="22" class="square"></td>
+		  <td id="23" class="square"></td>
+		  <td id="24" class="square"></td>
+		  <td id="25" class="square"></td>
+		  <td id="26" class="square"></td>
+		  <td id="27" class="square"></td>
+		  <td id="28" class="square"></td>
+		  <td id="29" class="square"></td>
+		</tr>
+		<tr>
+		  <td id="30" class="square"></td>
+		  <td id="31" class="square"></td>
+		  <td id="32" class="square"></td>
+		  <td id="33" class="square"></td>
+		  <td id="34" class="square"></td>
+		  <td id="35" class="square"></td>
+		  <td id="36" class="square"></td>
+		  <td id="37" class="square"></td>
+		  <td id="38" class="square"></td>
+		  <td id="39" class="square"></td>
+		</tr>
+		<tr>
+		  <td id="40" class="square"></td>
+		  <td id="41" class="square"></td>
+		  <td id="42" class="square"></td>
+		  <td id="43" class="square"></td>
+		  <td id="44" class="square"></td>
+		  <td id="45" class="square"></td>
+		  <td id="46" class="square"></td>
+		  <td id="47" class="square"></td>
+		  <td id="48" class="square"></td>
+		  <td id="49" class="square"></td>
+		</tr>
+		<tr>
+		  <td id="50" class="square"></td>
+		  <td id="51" class="square"></td>
+		  <td id="52" class="square"></td>
+		  <td id="53" class="square"></td>
+		  <td id="54" class="square"></td>
+		  <td id="55" class="square"></td>
+		  <td id="56" class="square"></td>
+		  <td id="57" class="square"></td>
+		  <td id="58" class="square"></td>
+		  <td id="59" class="square"></td>
+		</tr>
+		<tr>
+		  <td id="60" class="square"></td>
+		  <td id="61" class="square"></td>
+		  <td id="62" class="square"></td>
+		  <td id="63" class="square"></td>
+		  <td id="64" class="square"></td>
+		  <td id="65" class="square"></td>
+		  <td id="66" class="square"></td>
+		  <td id="67" class="square"></td>
+		  <td id="68" class="square"></td>
+		  <td id="69" class="square"></td>
+		</tr>
+		<tr>
+		  <td id="70" class="square"></td>
+		  <td id="71" class="square"></td>
+		  <td id="72" class="square"></td>
+		  <td id="73" class="square"></td>
+		  <td id="74" class="square"></td>
+		  <td id="75" class="square"></td>
+		  <td id="76" class="square"></td>
+		  <td id="77" class="square"></td>
+		  <td id="78" class="square"></td>
+		  <td id="79" class="square"></td>
+		</tr>
+		<tr>
+		  <td id="80" class="square"></td>
+		  <td id="81" class="square"></td>
+		  <td id="82" class="square"></td>
+		  <td id="83" class="square"></td>
+		  <td id="84" class="square"></td>
+		  <td id="85" class="square"></td>
+		  <td id="86" class="square"></td>
+		  <td id="87" class="square"></td>
+		  <td id="88" class="square"></td>
+		  <td id="89" class="square"></td>
+		</tr>
+		<tr>
+		  <td id="90" class="square"></td>
+		  <td id="91" class="square"></td>
+		  <td id="92" class="square"></td>
+		  <td id="93" class="square"></td>
+		  <td id="94" class="square"></td>
+		  <td id="95" class="square"></td>
+		  <td id="96" class="square"></td>
+		  <td id="97" class="square"></td>
+		  <td id="98" class="square"></td>
+		  <td id="99" required="true" class="square"></td>
+		</tr>
+	  </tbody>
+	</table>
+	</div>
+		<div id="score">
+			<h3 id="playerShips">You have 10/10 Ships left</h3>
+			<h3 id="cpuShips">CPU has 10/10 Ships left</h3>
+			</div>
+		</div>
+      </div>
+</body>
+</html>

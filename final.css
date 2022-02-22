@@ -1,0 +1,100 @@
+body {
+	background-color:black;
+}
+img {
+	width:700px;
+	height:150px;
+}
+td {
+	height: 50px;
+	width: 50px;
+	text-align: center;
+}
+table{
+	background-color: gray;
+}
+.hit{
+	background-color: red;
+	pointer-events: none;
+}
+
+.miss {
+	background-color: lightblue;
+	pointer-events: none;
+}
+
+.square {
+	background-color: blue;
+}
+
+ul.tabNavigation {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+ul.tabNavigation li {
+	display: inline;
+	font-size: 25px;
+}
+
+ul.tabNavigation li a {
+	padding: 3px 10px;
+	background-color: gray;
+	color: black;
+	text-decoration: none;
+}
+
+ul.tabNavigation li a.selected,
+ul.tabNavigation li a:hover {
+	background-color: gray;
+	color: silver;
+	padding-top: 7px;
+}
+
+ul.tabNavigation li A:focus {
+	outline: 0;
+}
+
+div.tabs > div {
+	padding: 15px;
+	margin-top: 3px;
+}
+
+div.tabs > div h2 {
+	margin-top: 0;
+}
+
+#basics {
+	background-color:gray;
+}
+
+#play {
+	background-color:gray;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+#tips {
+	background-color: gray ;
+}
+
+#gameboard {
+	display: inline-block;
+    left: 0;
+}
+#score{
+	border-color:black;
+	border-style: groove;
+	text-align: center;
+	color: #1DA9D1;
+	position:absolute;
+	top:300px;
+	right:100px;
+}
+.error{
+	color:red;
+}
+#playerInput{
+	text-align: right;
+}
+
